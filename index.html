@@ -9,35 +9,43 @@
 <body>
    <main>
       <div class="container">
-        <section class="encriptar">
+        <section class="input">
           <img src="./assets/alura-logo.png" alt="Alura Logo">
           <textarea placeholder="Digite seu texto"></textarea>
 
-          <div class="encriptar__alert-box">
+          <div class="input__warning-box">
             <ion-icon name="alert-circle"></ion-icon>
             <span>Apenas letras minúsculas e sem acento.</span>
           </div>
 
-          <div class="encriptar__container-bts">
-            <button class="encriptar__button">Criptografar</button>
-            <button class="encriptar__button--descriptar">Descriptografar</button>
+          <div class="input__container-bts">
+            <button class="input__button">Criptografar</button>
+            <button class="input__button--output">Descriptografar</button>
           </div>
         </section>
 
-        <section class="desencriptar">
+        <section class="output">
+          <textarea class=""></textarea>
           <img src="./assets/searching-girl.png" alt="Logo de uma garota com uma lupa na mão">
-          <div class="desencriptar__message-box">
+          <div class="output__message-box">
             <h2>Nenhuma mensagem encontrada</h2>
             <p>Digite um texto que deseja criptografar ou descriptografar.</p>
           </div>
-          <button class="desencriptar__button">
+          <button class="output__button">
             Copiar
           </button>
         </section>
-
       </div>
     </main>
-    
+    <footer class="footer">
+      <p> &copy;Desenvolvido por Nadine Coelho</p>
+      <div class="footer__links">
+        <a href="https://github.com/coelho-na" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+        <a href="https://www.linkedin.com/in/coelho-na/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://codepen.io/coelho-na" target="_blank"><ion-icon name="logo-codepen"></ion-icon></a>
+      </div>
+    </footer>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="app.js"></script>
