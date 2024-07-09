@@ -10,8 +10,10 @@
    <main>
       <div class="container">
         <section class="input">
-          <img src="./assets/alura-logo.png" alt="Alura Logo">
-          <textarea placeholder="Digite seu texto"></textarea>
+          <div class="input__logo-box">
+            <img class="input__logo-box__img" src="./assets/alura-logo.png" alt="Alura Logo">
+          </div>
+          <textarea class="input__text-area" placeholder="Digite seu texto"></textarea>
 
           <div class="input__warning-box">
             <ion-icon name="alert-circle"></ion-icon>
@@ -20,13 +22,13 @@
 
           <div class="input__container-bts">
             <button class="input__button">Criptografar</button>
-            <button class="input__button--output">Descriptografar</button>
+            <button class="input__button input__button--output">Descriptografar</button>
           </div>
         </section>
 
         <section class="output">
-          <textarea class=""></textarea>
-          <img src="./assets/searching-girl.png" alt="Logo de uma garota com uma lupa na mão">
+          <textarea class="output__text-area"></textarea>
+          <img class="output__img" src="./assets/searching-girl.png" alt="Logo de uma garota com uma lupa na mão">
           <div class="output__message-box">
             <h2>Nenhuma mensagem encontrada</h2>
             <p>Digite um texto que deseja criptografar ou descriptografar.</p>
