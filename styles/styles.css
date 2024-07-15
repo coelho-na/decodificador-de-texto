@@ -42,7 +42,7 @@ main{
 
 /*Input Section Style*/
 
-.input__logo-box{
+.header{
     width: 100%;
     height: 96px;
     margin-bottom: 76px;
@@ -195,4 +195,72 @@ main{
 .footer__links a ion-icon:hover {
     transform: scale(.8);
     color: var(--clr-gray-200);
+}
+
+/*Media Queries*/
+
+@media (min-width: 768px){
+    main{
+        margin: 32px;
+    }
+
+    .input__container-bts{
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .input__button{
+        width: 100%;
+    }
+    .input__text-area{
+        height: 500px;
+    }
+
+    .output__text-area{
+        height: 180px;
+    }
+}
+
+@media screen and (min-width:1440px){
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .input{
+        margin-top: 165px;
+        width: 680px;
+    }
+    
+    .output{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 400px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+    .output__img{
+        display: block;
+        width:336px;
+        height: 300px;
+    }
+   
+    .footer{
+       flex-direction: row;
+       justify-content: center;
+    }
+
+    main{
+        height: calc(100vh - 132px);
+    }
+
+    .header{
+        width: 120px;
+    }
+
+    .output__text-area{
+        height: 100%;
+    }
+        
 }
