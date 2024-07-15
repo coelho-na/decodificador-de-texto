@@ -4,6 +4,7 @@ const decryptButton = document.querySelector(".input__button--output");
 const output = document.querySelector(".output__text-area");
 const copyButton = document.querySelector(".output__button");
 const messageBox = document.querySelector(".output__message-box");
+const imageOutput = document.querySelector(".output__img");
 
 const encrypt = (value) => {
   return value.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
@@ -43,6 +44,8 @@ encryptButton.addEventListener("click", () => {
         changeDisplay(output, "block");
         changeDisplay(copyButton, "block");
         changeDisplay(messageBox, "none");
+        copyButton.textContent= "Copiar";
+        changeDisplay(imageOutput, "none");
         insertHTML(output, encryptResult);
         limparCampo(input);
     }
@@ -54,9 +57,7 @@ copyButton.addEventListener("click", () => {
   let copyText = output;
   copyText.select();
   document.execCommand('copy');
-  alert("Texto copiado para a área de transferência...");
-    // copyText.value = "";
-    // window.location.reload();
+  copyButton.textContent= "Texto copiado";
 
  });
 
@@ -65,10 +66,12 @@ decryptButton.addEventListener("click", () => {
   if(input.value == ""){
     alert("Por favor, digite um texto");
   }else{
-    output.removeAttribute("placeholder");
     const inputValue = input.value;
     const decryptResult = decrypt(inputValue);
     insertHTML(output, decryptResult);
+    limparCampo(input);
+    copyButton.textContent= "Copiar";
+    changeDisplay(imageOutput, "none");
   }
 });
 
