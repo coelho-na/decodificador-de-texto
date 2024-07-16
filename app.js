@@ -54,14 +54,13 @@ encryptButton.addEventListener("click", () => {
 } );
 
 copyButton.addEventListener("click", () => {
-  let copyText = output.innerHTML;
-  navigator.clipboard.writeText(copyText)
-         .then(() => {
-         alert("Texto copiado...");
-   })
-       .catch(err => {
-       console.log('Something went wrong', err);
-     })
+  let outputText = output;
+    if (outputText.value.length > 0) {
+        const copiedText = outputText.innerHTML;
+        navigator.clipboard.writeText(copiedText).then(() => {
+            outputText.innerHTML = "Seu texto foi copiado com sucesso";
+        });
+    }
 
  });
 
